@@ -1,0 +1,144 @@
+@import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+.bg-info{
+	background-color:#94CDE0;
+}
+.modal-content{
+    width: 320px;
+    height: 300px;
+	position:relative;
+	left:100px;
+}
+.changeheight{
+	height: 380px;
+}
+
+
+.modal-content input{
+    width: 100%;
+    margin-bottom: 20px;
+	outline: none;
+	padding:none;
+	border:none;
+}
+
+
+.logincontent{
+	padding-top:50px;
+}
+.textbox{
+	border-bottom:1px solid #00C3E1;
+	padding-top:20px;
+}
+
+.logincontent input{
+	width:260px;
+}
+
+.backimage{
+	background: url(back.jpg) no-repeat;
+	background-size:cover;
+    width: 100%;
+    height: 100%;
+}
+
+
+#logbtn{
+	width:318px;
+	padding:none;
+	border:none;
+	margin:none;
+	margin-top:20px;
+	height:50px;
+	background-color:#00C3E1;
+	position:relative;
+	left:-16px;
+	top:30px;
+}
+
+#logbtn:hover{
+	background-color:#94cde0 ;
+	cursor: pointer;
+}
+
+#signbtn{
+	width:318px;
+	padding:none;
+	border:none;
+	margin:none;
+	margin-top:20px;
+	height:50px;
+	background-color:#00C3E1;
+	position:relative;
+	left:-16px;
+	top:-50px;
+}
+#signbtn:hover{
+	background-color:#94cde0 ;
+	cursor: pointer;
+}
+
+
+
+.avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+	background-color: #fff;
+}
+
+
+
+
+.card-container{
+    /*margin:100px 150px 100px 170px;*/
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+
+}
+.card{
+    margin:25px;
+    float:left;
+
+}
+.card:hover{
+    background-color:#94cde0;
+	cursor:pointer;
+}
+
+.collapse button{
+	margin-right:5px;
+}
+.rbtns{
+	margin-top:10px;
+	border:none;
+	
+}
+.radiobtn{
+	padding:none;
+	border:none;
+	position:relative;
+	top:-20px;
+	left:-30px;
+}
+.username{
+	float:right;
+	color:#fff;
+	position:relative;
+	top:5px;
+}
+
+
+
+
+
+
+
+
+
+
+

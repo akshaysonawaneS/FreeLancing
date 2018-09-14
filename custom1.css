@@ -1,0 +1,22 @@
+
+.post1{
+	margin: 50px;
+	width: 600px;
+	float: left;
+}
+
+.sideBar{
+	margin-top:20px;
+	width: 200px;
+	height: 500px; 	
+	border-right: 1px solid grey;
+	text-align: center;
+
+}
+
+.sidebarcontainer{
+	
+	height: 100%;
+
+}
+
