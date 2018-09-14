@@ -1,3 +1,8 @@
+<?php
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,7 +32,7 @@
   <div class="collapse navbar-collapse" id="navContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item ">
-        <a class="nav-link" href="tasker.php?date.code">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="postatask.php">Post a Task</a>
@@ -40,11 +45,12 @@
       </li>
     </ul>
 	<?php
-		if(!empty($_SESSION['uname']))
-		{
-			echo "<p class='username'>Welcome, ".$_SESSION['uname']."</p>";
-		}
-	?>
+    if(!empty($_SESSION['uname']))
+    {
+      echo "<p class='username'>Welcome, ".$_SESSION['uname']."</p>";
+      echo '<form action="logout.inc.php" method="post"><button type="submit" name="logout" class="btn btn-light" style="margin-left:8px;">Log out</button></form>';
+    }
+  ?>
 
   </div>
   
