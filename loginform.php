@@ -10,11 +10,11 @@
 		<form action="loginform.inc.php" method="post">
 			<div class="textbox">
 				<i class="fa fa-user"></i>
-				<input type="text" name="uname" placeholder="Username"><br>
+				<input type="text" name="uname" placeholder="Username" required><br>
 			</div>
 			<div class="textbox">
 				<i class="fa fa-unlock"></i>
-				<input type="password" name="pass" placeholder="Password">
+				<input type="password" name="pass" placeholder="Password" required>
 			</div>
 			
 			<button id="logbtn" name="submit" type="submit">Login</button>

@@ -3,6 +3,12 @@
 session_start();
 ?>
 
+<script>
+function myFunction() {
+    alert("Check Username or Password");
+}
+</script>
+
 <?php
 	if(isset($_POST['submit']))
 	{
@@ -24,11 +30,14 @@ session_start();
 		
 		}
 		else{
-			echo "username or password is wrong";
+                 echo '<script type="text/javascript">
+                window.location.href = "/FreeLancing/";
+                 myFunction();
+            </script>';
 		}
 	}
 	else{
-		header('location: tasker.php');
+		header('location: index.php');
 		exit();
 	}
 	

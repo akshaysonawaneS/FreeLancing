@@ -42,11 +42,11 @@ include 'dbconn.php';
       </li>
     </ul>
     <button type="button" class="btn btn-light" data-toggle="modal" data-target="#exampleModalCenter1">
-		Login
+		Log in
 	</button>
 	
 	<button type="button" class="btn btn-light" data-toggle="modal" data-target="#exampleModalCenter2">
-		Sign in
+		Sign up
 	</button>
 
   </div>
