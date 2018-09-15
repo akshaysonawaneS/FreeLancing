@@ -8,15 +8,15 @@
 			<form action="signupform.inc.php" method="post">
 				<div class="textbox">
 					<i class="fa fa-envelope-open"></i>
-					<input type="text" name="email" placeholder="Email"><br>
+					<input type="text" name="email" placeholder="Email" required><br>
 				</div>
 				<div class="textbox">
 					<i class="fa fa-user"></i>
-					<input type="text" name="suname" placeholder="Username"><br>
+					<input type="text" name="suname" placeholder="Username" required><br>
 				</div>
 				<div class="textbox">
 					<i class="fa fa-unlock"></i>
-					<input type="password" name="spass" placeholder="Password">
+					<input type="password" name="spass" placeholder="Password" required>
 				</div >
 				<div class="rbtns">
 					tasker<input type="radio" value="tasker" name="typeofuser" class="radiobtn">

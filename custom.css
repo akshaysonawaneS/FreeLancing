@@ -116,9 +116,11 @@ span.psw {
     margin:25px;
     float:left;
 
+
 }
 .card:hover{
-    background-color:#94cde0 ;
+    /*background-color:#94cde0 ;*/
+    transform: scale(1.5); 
 }
 
 @-webkit-keyframes animatezoom {

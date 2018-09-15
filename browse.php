@@ -1,11 +1,12 @@
 <?php
-// Start the session
 session_start();
+
 ?>
 
+<!DOCTYPE html>
 <html>
 <head>
-  <title>Browse taskes</title>
+  <title>Tasker</title>
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   
@@ -21,7 +22,7 @@ session_start();
     
 
 </head>
-<body background="back.jpg">
+<body class="backimage">
 <nav class="navbar navbar-expand-sm navbar-dark bg-info">
   <a class="navbar-brand" style="margin-right: 30px; margin-left:30px" href="#"><font face="Lucida Calligraphy">Tasker</font></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,49 +38,22 @@ session_start();
         <a class="nav-link" href="postatask.php">Post a Task</a>
       </li>
        <li class="nav-item active">
-        <a class="nav-link" href="#">Browse Tasks</a>
+        <a class="nav-link" href="browse.php">Browse Tasks</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">How it works</a>
       </li>
     </ul>
-	<?php
-		if(!empty($_SESSION['uname']))
-		{
-			echo "<p class='username'>Welcome, ".$_SESSION['uname']."</p>";
-		   echo '<form action="logout.inc.php" method="post"><button type="submit" name="logout" class="btn btn-light" style="margin-left:8px;">Log out</button></form>';
+  <?php
+    if(!empty($_SESSION['uname']))
+    {
+      echo "<p class='username'>Welcome, ".$_SESSION['uname']."</p>";
+      echo '<form action="logout.inc.php" method="post"><button type="submit" name="logout" class="btn btn-light" style="margin-left:8px;">Log out</button></form>';
     }
-	?>
+  ?>
 
   </div>
   
-  <div id="id01" class="modal">
-  
-  <form class="modal-content animate" action="/action_page.php">
-    <div class="imgcontainer">
-      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-      <img src="img_avatar2.png" alt="Avatar" class="avatar">
-    </div>
-
-    <div class="container">
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
-
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
-        
-      <button class="formlogin" style="background-color: #94cde0" type="submit">Login</button>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
-    </div>
-
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn formlogin">Cancel</button>
-      <span class="psw">Forgot <a href="#">password?</a></span>
-    </div>
-  </form>
-</div>
 </nav>
 
 <div class="sidebarcontainer">

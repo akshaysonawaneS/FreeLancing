@@ -61,7 +61,7 @@ include 'dbconn.php';
 
 </nav>
 <div class="card-container">
-	<div class="card" id="web" style="width: 18rem;" onmouseover="webfunc()">
+	<div class="card" id="web" style="width: 18rem;">
 	  <div class="card-body">
 	    <h5 class="card-title">Web Development</h5>
 	    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
