@@ -58,11 +58,16 @@ session_start();
 
 <div class="sidebarcontainer">
   <div class="sideBar" name="sideBarb">
-    <p>Web Development</p>
-    <p>Web Development</p>
-    <p>Web Development</p>
-    <p>Web Development</p>
-    <p>Web Development</p>
+    <div class="btn-group-vertical">
+  <button type="button" class="btn btn-light">Web Development</button>
+  <button type="button" class="btn btn-light">Android App Development</button>
+  <button type="button" class="btn btn-light">Sony</button>
+  <button type="button" class="btn btn-light">Samsung</button>
+  <button type="button" class="btn btn-light">Sony</button>
+  <button type="button" class="btn btn-light">Samsung</button>
+
+</div>
+
 
   </div>
 </div>

@@ -7,16 +7,17 @@
 
 .sideBar{
 	margin-top:20px;
-	width: 200px;
+	width: 250px;
 	height: 500px; 	
-	background-color: white;
-	border-right: 1px solid grey;
+	background-color: #d7e5e0;
+	padding: 7px;
+	border-right: 2px solid grey;
 	text-align: center;
 
 }
 
 .sidebarcontainer{
-	
+	padding: 10px;
 	height: 100%;
 
 }
