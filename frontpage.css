@@ -37,8 +37,10 @@
 .backimage{
 	background: url(back.jpg) no-repeat;
 	background-size:cover;
+	background-attachment: fixed;
     width: 100%;
     height: 100%;
+	
 }
 
 
