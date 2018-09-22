@@ -1,6 +1,7 @@
 <?php
 // Start the session
 session_start();
+
 ?>
 
 <script>
@@ -22,7 +23,8 @@ function myFunction() {
 			$_SESSION["uname"]=$uname;
 			$_SESSION["uid"]=$row["user_id"];
 			$row = mysqli_fetch_assoc($result);
-			if($row['user_type'=='tasker']){
+			$_SESSION['error']='none';
+			if($row['user_type']=='tasker'){
 				header('location: postatask.php');
 			}else{
 				header('location: browse.php');
@@ -30,10 +32,8 @@ function myFunction() {
 		
 		}
 		else{
-                 echo '<script type="text/javascript">
-                window.location.href = "/FreeLancing/";
-                 myFunction();
-            </script>';
+                 $_SESSION['error']='wrong_pass';
+				 header('location: index.php');
 		}
 	}
 	else{

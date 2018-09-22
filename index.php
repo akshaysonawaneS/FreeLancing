@@ -1,8 +1,10 @@
 <?php
 session_start();
 
-include 'dbconn.php';
+include 'dbconn.php'; 
 ?>
+
+
 
 
 <!DOCTYPE html>
@@ -41,7 +43,7 @@ include 'dbconn.php';
         <a class="nav-link" href="#">How it works</a>
       </li>
     </ul>
-    <button type="button" class="btn btn-light" data-toggle="modal" data-target="#exampleModalCenter1">
+    <button type="button" id="loginindex" class="btn btn-light" data-toggle="modal" data-target="#exampleModalCenter1">
 		Log in
 	</button>
 	
@@ -58,6 +60,22 @@ include 'dbconn.php';
 <?php
 	include 'signupform.php';
 ?>
+
+<?php
+    $error = $_SESSION['error'];
+?>
+
+<script type='text/javascript'>
+	
+	var error = '<?php echo $error; ?>';
+	if (error == 'wrong_pass'){
+		$(document).ready(function() 
+			{ 
+				$('#loginindex').click(); 
+			});
+	}
+</script>
+
 
 </nav>
 <div class="card-container">
