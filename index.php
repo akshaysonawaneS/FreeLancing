@@ -1,5 +1,8 @@
 <?php
 session_start();
+if(empty($_SESSION['error'])){
+	$_SESSION='none';
+}
 
 include 'dbconn.php'; 
 ?>
