@@ -19,7 +19,7 @@
 					<input type="password" name="spass" placeholder="Password" required>
 				</div >
 				<div class="rbtns">
-					tasker<input type="radio" value="tasker" name="typeofuser" class="radiobtn">
+					Tasker<input type="radio" value="tasker" name="typeofuser" class="radiobtn">
 					Freelancer<input type="radio" value="freelancer" name="typeofuser" class="radiobtn">
 				</div>
 				
