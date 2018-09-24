@@ -1,4 +1,3 @@
-  	
 <div class="modal fade" id="exampleModalCenter1" tabindex="0" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
@@ -16,8 +15,15 @@
 				<i class="fa fa-unlock"></i>
 				<input type="password" name="pass" placeholder="Password" required>
 			</div>
+			<?php
+				if($_SESSION['error']=='wrong_pass'){
+					echo "<p style='color:red ; position:absolute ;'>wrong username or password</p></div>";
+				}
+			?>
+			
 			
 			<button id="logbtn" name="submit" type="submit">Login</button>
+			
 		</form>
 		</div>
       </div>

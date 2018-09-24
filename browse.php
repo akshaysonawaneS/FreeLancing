@@ -23,7 +23,7 @@ session_start();
 
 </head>
 <body class="backimage">
-<nav class="navbar navbar-expand-sm navbar-dark bg-info">
+<nav class="navbar navbar-expand-sm navbar-dark fixed-top bg-info">
   <a class="navbar-brand" style="margin-right: 30px; margin-left:30px" href="#"><font face="Lucida Calligraphy">Tasker</font></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -61,15 +61,27 @@ session_start();
     <div class="btn-group-vertical">
   <button type="button" class="btn btn-light">Web Development</button>
   <button type="button" class="btn btn-light">Android App Development</button>
-  <button type="button" class="btn btn-light">Sony</button>
-  <button type="button" class="btn btn-light">Samsung</button>
-  <button type="button" class="btn btn-light">Sony</button>
-  <button type="button" class="btn btn-light">Samsung</button>
+  <button type="button" class="btn btn-light">Software development</button>
+  <button type="button" class="btn btn-light">Database Solutions</button>
+  <button type="button" class="btn btn-light">Software Testing</button>
+  <button type="button" class="btn btn-light">Cloud Computing</button>
 
 </div>
-
-
   </div>
+</div>
+<?php
+	include 'dbconn.php';
+	$uname=$_SESSION["uname"];
+	$id=$_SESSION["uid"];
+	$sql = "SELECT * FROM tasks";
+	$result = mysqli_query($conn, $sql);
+	$row = mysqli_fetch_assoc($result);
+	
+?>
+<div class="jobs">
+  <h3>title</h3>
+  <p>description</p>
+</p>
 </div>
 </body>
 </html>
