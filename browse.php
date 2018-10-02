@@ -57,10 +57,12 @@ session_start();
 </nav>
   <div>
     <div class="sidenav">
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#clients">Clients</a>
-      <a href="#contact">Contact</a>
+      <a href="#about">Web Development</a>
+      <a href="#services">Android App Development</a>
+      <a href="#clients">Software Devlopment</a>
+      <a href="#contact">Database Solution</a>
+      <a href="#contact">Software Testing</a>
+      <a href="#contact">Cloud Computing</a>
     </div>
 
     <?php
@@ -73,7 +75,8 @@ session_start();
     	$row = mysqli_fetch_assoc($result);
     	}
     ?>
-    <div style="padding-top: 10px; padding-bottom: 10px;">
+
+    <div style="padding-bottom: 10px;">
       <div class="jobs">
         <h3>Title</h3>
         <p>Description</p>

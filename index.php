@@ -63,7 +63,7 @@ include 'dbconn.php';
 ?>
 
 <?php
-    $error = $_SESSION['error'];
+	    	$error = $_SESSION['error'];	
 ?>
 
 <script type='text/javascript'>
