@@ -55,33 +55,30 @@ session_start();
   </div>
   
 </nav>
+  <div>
+    <div class="sidenav">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#clients">Clients</a>
+      <a href="#contact">Contact</a>
+    </div>
 
-<div class="sidebarcontainer">
-  <div class="sideBar" name="sideBarb">
-    <div class="btn-group-vertical">
-  <button type="button" class="btn btn-light">Web Development</button>
-  <button type="button" class="btn btn-light">Android App Development</button>
-  <button type="button" class="btn btn-light">Software development</button>
-  <button type="button" class="btn btn-light">Database Solutions</button>
-  <button type="button" class="btn btn-light">Software Testing</button>
-  <button type="button" class="btn btn-light">Cloud Computing</button>
+    <?php
+    	include 'dbconn.php';
+    	if($uname=$_SESSION["uname"])
+      {
+    	$id=$_SESSION["uid"];
+    	$sql = "SELECT * FROM tasks";
+    	$result = mysqli_query($conn, $sql);
+    	$row = mysqli_fetch_assoc($result);
+    	}
+    ?>
+    <div class="jobs">
+      <h3>Title</h3>
+      <p>Description</p>
+    </p>
 
-</div>
+    </div>
   </div>
-</div>
-<?php
-	include 'dbconn.php';
-	$uname=$_SESSION["uname"];
-	$id=$_SESSION["uid"];
-	$sql = "SELECT * FROM tasks";
-	$result = mysqli_query($conn, $sql);
-	$row = mysqli_fetch_assoc($result);
-	
-?>
-<div class="jobs">
-  <h3>title</h3>
-  <p>description</p>
-</p>
-</div>
 </body>
 </html>
