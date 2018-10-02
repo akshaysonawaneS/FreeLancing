@@ -73,12 +73,40 @@ session_start();
     	$row = mysqli_fetch_assoc($result);
     	}
     ?>
-    <div class="jobs">
-      <h3>Title</h3>
-      <p>Description</p>
-    </p>
-
+    <div style="padding-top: 10px; padding-bottom: 10px;">
+      <div class="jobs">
+        <h3>Title</h3>
+        <p>Description</p>
+      </p>
+      </div>
     </div>
-  </div>
+    <div style="padding-top: 10px; padding-bottom: 10px;">
+      <div class="jobs">
+        <h3>Title</h3>
+        <p>Description</p>
+      </p>
+      </div>
+    </div>
+    <div style="padding-top: 10px; padding-bottom: 10px;">
+      <div class="jobs">
+        <h3>Title</h3>
+        <p>Description</p>
+      </p>
+      </div>
+    </div>
+    <div style="padding-top: 10px; padding-bottom: 10px;">
+      <div class="jobs">
+        <h3>Title</h3>
+        <p>Description</p>
+      </p>
+      </div>
+    </div>
+    <div style="padding-top: 10px; padding-bottom: 10px;">
+      <div class="jobs">
+        <h3>Title</h3>
+        <p>Description</p>
+      </p>
+      </div>
+    </div>
 </body>
 </html>
