@@ -21,8 +21,9 @@ function myFunction() {
 
 		if (mysqli_num_rows($result) > 0) {
 			$_SESSION["uname"]=$uname;
-			$_SESSION["uid"]=$row["user_id"];
+			
 			$row = mysqli_fetch_assoc($result);
+			$_SESSION["uid"]=$row["user_id"];
 			$_SESSION['error']='none';
 			if($row['user_type']=='tasker'){
 				header('location: postatask.php');
