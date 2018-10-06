@@ -37,10 +37,8 @@
 .backimage{
 	background: url(back.jpg) no-repeat;
 	background-size:cover;
-	background-attachment: fixed;
     width: 100%;
-    height: 100%;
-	
+    height: 700px%;
 }
 
 
@@ -125,7 +123,7 @@
 .radiobtn{
 	padding:none;
 	border:none;
-	position:relative;
+			position:relative;
 	top:-20px;
 	left:-30px;
 }
@@ -136,10 +134,7 @@
 	top:5px;
 }
 
-.errormessage p{
-	color:red;
-	position:absolute;
-}
+
 
 
 

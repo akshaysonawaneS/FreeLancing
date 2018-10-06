@@ -42,7 +42,7 @@ session_start();
         <a class="nav-link" href="browse.php">Browse Tasks</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">How it works</a>
+        <a class="nav-link" href="howitworks.html">How it works</a>
       </li>
     </ul>
   <?php
@@ -56,17 +56,28 @@ session_start();
   </div>
   
 </nav>
+  <div>
+    <div class="sidenav">
+      <a href="#about">Web Development</a>
+      <a href="#services">Android App Development</a>
+      <a href="#clients">Software Devlopment</a>
+      <a href="#contact">Database Solution</a>
+      <a href="#contact">Software Testing</a>
+      <a href="#contact">Cloud Computing</a>
+    </div>
 
-<div class="sidebarcontainer">
-  <div class="sideBar" name="sideBarb">
-    <div class="btn-group-vertical">
-  <button type="button" class="btn btn-light">Web Development</button>
-  <button type="button" class="btn btn-light">Android App Development</button>
-  <button type="button" class="btn btn-light">Software development</button>
-  <button type="button" class="btn btn-light">Database Solutions</button>
-  <button type="button" class="btn btn-light">Software Testing</button>
-  <button type="button" class="btn btn-light">Cloud Computing</button>
+    <?php
+    	include 'dbconn.php';
+    	if($uname=$_SESSION["uname"])
+      {
+    	$id=$_SESSION["uid"];
+    	$sql = "SELECT * FROM tasks";
+    	$result = mysqli_query($conn, $sql);
+    	$row = mysqli_fetch_assoc($result);
+    	}
+    ?>
 
+<<<<<<< HEAD
 </div>
   </div>
 </div>
@@ -92,5 +103,42 @@ session_start();
 		alert(e.target.id);
 	}
 </script>
+=======
+    <div style="padding-bottom: 10px;">
+      <div class="jobs">
+        <h3>Title</h3>
+        <p>Description</p>
+      </p>
+      </div>
+    </div>
+    <div style="padding-top: 10px; padding-bottom: 10px;">
+      <div class="jobs">
+        <h3>Title</h3>
+        <p>Description</p>
+      </p>
+      </div>
+    </div>
+    <div style="padding-top: 10px; padding-bottom: 10px;">
+      <div class="jobs">
+        <h3>Title</h3>
+        <p>Description</p>
+      </p>
+      </div>
+    </div>
+    <div style="padding-top: 10px; padding-bottom: 10px;">
+      <div class="jobs">
+        <h3>Title</h3>
+        <p>Description</p>
+      </p>
+      </div>
+    </div>
+    <div style="padding-top: 10px; padding-bottom: 10px;">
+      <div class="jobs">
+        <h3>Title</h3>
+        <p>Description</p>
+      </p>
+      </div>
+    </div>
+>>>>>>> 410532ce48ce1a4e426a38033edec5abec70ada6
 </body>
 </html>

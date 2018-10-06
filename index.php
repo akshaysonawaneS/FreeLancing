@@ -43,7 +43,7 @@ include 'dbconn.php';
         <a class="nav-link" href="browse.php">Browse Tasks</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">How it works</a>
+        <a class="nav-link" href="howitworks.html">How it works</a>
       </li>
     </ul>
     <button type="button" id="loginindex" class="btn btn-light" data-toggle="modal" data-target="#exampleModalCenter1">
@@ -51,6 +51,7 @@ include 'dbconn.php';
 	</button>
 	
 	<button type="button" class="btn btn-light" data-toggle="modal" data-target="#exampleModalCenter2">
+		<span class="glyphicon glyphicon-user"></span>
 		Sign up
 	</button>
 
@@ -65,7 +66,7 @@ include 'dbconn.php';
 ?>
 
 <?php
-    $error = $_SESSION['error'];
+	    	$error = $_SESSION['error'];	
 ?>
 
 <script type='text/javascript'>
