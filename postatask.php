@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +17,7 @@ session_start();
   
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     
 
 </head>
@@ -56,30 +55,34 @@ session_start();
   
 </nav>
 
-	<div class="post1">
+	<div style="margin-left: 90px; margin-top: 50px;">
 		<form>
 			<h5>TITLE</h5>
 			<input type="text" name="title">
+      <br>
+      <br>
 			<h5>DESCRIPTION</h5>
 			<textarea rows="9 " cols="70" style="padding: 13px"></textarea>
 		</form>
 	</div>
 
-<h5 style="margin-top: 50px; margin-bottom: 20px;">TASKERS</h5>
-<input type="number" name="" style="width: 300px;">
+<h5 style="position: fixed; top: 110px; left: 750px;">TASKERS</h5>
+<input type="number" name="" style="width: 300px; position: fixed; top: 140px; left: 750px;">
   
 
-  <div> 
-	  <label><h4 style="margin-bottom: 10px; margin-top:25px;">Category</h4> 
+  <div style="position: fixed; top: 190px; left: 750px"> 
+	  <label><h4 >Category</h4> 
 	  <input list="cat" name="myCategory" /></label>
 	  <datalist id="cat"> <option value="Web Development"> <option value="Android App Devlopment"> <option value="Software Development"> 
 		  <option value="Database Solution">
 		  <option value="Software Testing"> 
-		  <option value="Cloud Computinge"> 
+		  <option value="Cloud Computing"> 
 	  </datalist>
   </div>
 
-  <button class="btn btn-info" style="width: 100px; margin-left: 400px; border-radius: 9px; margin-top:230px; height:45px" name="post">POST</button>
+  <h4 style="position: fixed; top: 290px; left: 750px;">EMAIL</h4>
+  <input type="text" name="" style="width: 300px; position: fixed; top: 320px; left: 750px;">
+  <button class="btn btn-info" style="width: 100px; position: fixed; top: 500px; left: 1000px;" name="post">POST</button>
 
 </body>
 </html>
