@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 ?>
 
 <!DOCTYPE html>
@@ -45,15 +44,40 @@ session_start();
         <a class="nav-link" href="howitworks.html">How it works</a>
       </li>
     </ul>
+	
   <?php
-    if(!empty($_SESSION['uname']))
+    if(empty($_SESSION['uname']))
+	{
+		 echo '<button type="button" id="loginindex" class="btn btn-light" data-toggle="modal" data-target="#exampleModalCenter1"> Log in </button>';
+		 $_SESSION["uname"]='guest';
+		$_SESSION["uid"]='default';
+		$_SESSION['error']='none';
+		 $down=1;
+	}
+	else
     {
+		$down=0;
+		
+		
       echo "<p class='username'>Welcome, ".$_SESSION['uname']."</p>";
       echo '<form action="logout.inc.php" method="post"><button type="submit" name="logout" class="btn btn-light" style="margin-left:8px;">Log out</button></form>';
     }
   ?>
+  <?php
+	include 'loginform.php';
+	?>
+
 
   </div>
+  <script>
+	var down = '<?php echo $down; ?>';
+	if (down == 1){
+		$(document).ready(function() 
+			{ 
+				$('#loginindex').click(); 
+			});
+	}
+  </script>
   
 </nav>
   <div>
@@ -85,7 +109,6 @@ session_start();
 	include 'dbconn.php';
 	$uname=$_SESSION["uname"];
 	$id=$_SESSION["uid"];
-	$count=1;
 	$sql = "SELECT * FROM tasks";
 	$result = mysqli_query($conn, $sql);
 	while($row = mysqli_fetch_assoc($result)) {
