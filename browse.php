@@ -89,20 +89,13 @@ session_start();
 	$sql = "SELECT * FROM tasks";
 	$result = mysqli_query($conn, $sql);
 	while($row = mysqli_fetch_assoc($result)) {
-		echo "<div class='jobs' id='".$count."' onclick='theFunction(event)' >";
+		echo "<div class='jobs' >";
 		echo "<h3> TITLE - ".$row["title"]."</h3>";
 		echo "<p> DESCRIPTION - ".$row["description"]."</p>";
 		echo "</div>";
-		$count=$count+1;
 	}
 	
 ?>
-<script>
-	function theFunction(e)	
-	{ 
-		alert(e.target.id);
-	}
-</script>
 
 </body>
 </html>
