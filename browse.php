@@ -41,7 +41,7 @@ session_start();
         <a class="nav-link" href="browse.php">Browse Tasks</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">How it works</a>
+        <a class="nav-link" href="howitworks.html">How it works</a>
       </li>
     </ul>
   <?php
