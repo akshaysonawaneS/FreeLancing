@@ -11,7 +11,7 @@ session_start();
   
   <link rel="stylesheet" type="text/css" href="frontpage.css">
   
-  <link rel="stylesheet" type="text/css" href="custom1.css">
+  <link rel="stylesheet" type="text/css" href="custom.css">
 
   <script type="text/javascript" href="custom.js"></script>
   
@@ -55,7 +55,7 @@ session_start();
   
 </nav>
 
-	<div style="margin-left: 90px; margin-top: 50px;">
+	<div style="margin-left: 50px; margin-top: 50px;">
 		<form>
 			<h5>TITLE</h5>
 			<input type="text" name="title">
