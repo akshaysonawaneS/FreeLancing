@@ -77,7 +77,7 @@ session_start();
     	}
     ?>
 
-<<<<<<< HEAD
+
 </div>
   </div>
 </div>
@@ -103,42 +103,6 @@ session_start();
 		alert(e.target.id);
 	}
 </script>
-=======
-    <div style="padding-bottom: 10px;">
-      <div class="jobs">
-        <h3>Title</h3>
-        <p>Description</p>
-      </p>
-      </div>
-    </div>
-    <div style="padding-top: 10px; padding-bottom: 10px;">
-      <div class="jobs">
-        <h3>Title</h3>
-        <p>Description</p>
-      </p>
-      </div>
-    </div>
-    <div style="padding-top: 10px; padding-bottom: 10px;">
-      <div class="jobs">
-        <h3>Title</h3>
-        <p>Description</p>
-      </p>
-      </div>
-    </div>
-    <div style="padding-top: 10px; padding-bottom: 10px;">
-      <div class="jobs">
-        <h3>Title</h3>
-        <p>Description</p>
-      </p>
-      </div>
-    </div>
-    <div style="padding-top: 10px; padding-bottom: 10px;">
-      <div class="jobs">
-        <h3>Title</h3>
-        <p>Description</p>
-      </p>
-      </div>
-    </div>
->>>>>>> 410532ce48ce1a4e426a38033edec5abec70ada6
+
 </body>
 </html>
