@@ -40,7 +40,7 @@ include 'dbconn.php';
         <a class="nav-link" href="postatask.php">Post a Task</a>
       </li>
        <li class="nav-item">
-        <a class="nav-link" href="browse.php">Browse Tasks</a>
+        <a class="nav-link" href="browse.php?card=0">Browse Tasks</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="howitworks.html">How it works</a>
@@ -83,42 +83,54 @@ include 'dbconn.php';
 
 </nav>
 <div class="card-container">
-	<div class="card" id="web" style="width: 18rem;">
-	  <div class="card-body">
+	<a href="browse.php?card=1" >
+		<div class="card" id="web" style="width: 18rem;text-decoration:none">
+	    <div class="card-body">
 	    <h5 class="card-title">Web Development</h5>
 	    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-	  </div>
-	</div>
-	<div class="card" style="width: 18rem;">
-	  <div class="card-body">
-	    <h5 class="card-title">Android App Development</h5>
-	    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-	  </div>
-	</div>
-	<div class="card" style="width: 18rem;">
-	  <div class="card-body">
-	    <h5 class="card-title">Software Development</h5>
-	    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-	  </div>
-	</div>
-	<div class="card" style="width: 18rem;">
-	  <div class="card-body">
-	    <h5 class="card-title">Database Solutions</h5>
-	    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-	  </div>
-	</div>
-	<div class="card" style="width: 18rem;">
-	  <div class="card-body">
-	    <h5 class="card-title">Software Testing</h5>
-	    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-	  </div>
-	</div>
-	<div class="card" style="width: 18rem;">
-	  <div class="card-body">
-	    <h5 class="card-title">Cloud Computing</h5>
-	    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-	  </div>
-	</div>
+		</div>
+		</div>
+	</a>
+	<a href="browse.php?card=2" >
+		<div class="card" style="width: 18rem;">
+		  <div class="card-body">
+			<h5 class="card-title">Android App Development</h5>
+			<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+		  </div>
+		</div>
+	</a>
+	<a href="browse.php?card=3" >
+		<div class="card" style="width: 18rem;">
+		  <div class="card-body">
+			<h5 class="card-title">Software Development</h5>
+			<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+		  </div>
+		</div>
+	</a>
+	<a href="browse.php?card=4" >
+		<div class="card" style="width: 18rem;">
+		  <div class="card-body">
+			<h5 class="card-title">Database Solutions</h5>
+			<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+		  </div>
+		</div>
+	</a>
+	<a href="browse.php?card=5" >
+		<div class="card" style="width: 18rem;">
+		  <div class="card-body">
+			<h5 class="card-title">Software Testing</h5>
+			<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+		  </div>
+		</div>
+	</a>
+	<a href="browse.php?card=6" >
+		<div class="card" style="width: 18rem;">
+		  <div class="card-body">
+			<h5 class="card-title">Cloud Computing</h5>
+			<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+		  </div>
+		</div>
+	</a>
 </div>
 
 

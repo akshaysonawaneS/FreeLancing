@@ -37,7 +37,7 @@ session_start();
         <a class="nav-link" href="postatask.php">Post a Task</a>
       </li>
        <li class="nav-item">
-        <a class="nav-link" href="browse.php">Browse Tasks</a>
+        <a class="nav-link" href="browse.php?card=0">Browse Tasks</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="howitworks.html">How it works</a>

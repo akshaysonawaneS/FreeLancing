@@ -66,7 +66,7 @@ session_start();
   <?php
 	include 'loginform.php';
 	?>
-
+	
 
   </div>
   <script>
@@ -77,17 +77,21 @@ session_start();
 				$('#loginindex').click(); 
 			});
 	}
+	$('.modal-dialog').on('shown.bs.modal', function () {
+    $('.modal-body').focus();
+})
   </script>
   
 </nav>
   <div>
     <div class="sidenav">
-      <a href="#about">Web Development</a>
-      <a href="#services">Android App Development</a>
-      <a href="#clients">Software Devlopment</a>
-      <a href="#contact">Database Solution</a>
-      <a href="#contact">Software Testing</a>
-      <a href="#contact">Cloud Computing</a>
+		<a href="browse.php?card=0">All</a>
+        <a href="browse.php?card=1">Web Development</a>
+        <a href="browse.php?card=2">Android App Development</a>
+        <a href="browse.php?card=3">Software Devlopment</a>
+        <a href="browse.php?card=4">Database Solution</a>
+        <a href="browse.php?card=5">Software Testing</a>
+        <a href="browse.php?card=6">Cloud Computing</a>
     </div>
 
     <?php
@@ -109,7 +113,36 @@ session_start();
 	include 'dbconn.php';
 	$uname=$_SESSION["uname"];
 	$id=$_SESSION["uid"];
-	$sql = "SELECT * FROM tasks";
+	$var=$_GET["card"];
+	if($var==0)
+	{
+		$sql = "SELECT * FROM tasks";
+	}
+	else if($var==1)
+	{
+		$sql = "SELECT * FROM tasks WHERE Category='web development'";
+	}
+	else if($var==2)
+	{
+		$sql = "SELECT * FROM tasks WHERE Category='android app development'";
+	}
+	else if($var==3)
+	{
+		$sql = "SELECT * FROM tasks WHERE Category='software development'";
+	}
+	else if($var==4)
+	{
+		$sql = "SELECT * FROM tasks WHERE Category='database development'";
+	}
+	else if($var==5)
+	{
+		$sql = "SELECT * FROM tasks WHERE Category='software testing'";
+	}
+	else if($var==6)
+	{
+		$sql = "SELECT * FROM tasks WHERE Category='cloud computing'";
+	}
+	
 	$result = mysqli_query($conn, $sql);
 	while($row = mysqli_fetch_assoc($result)) {
 		echo "<div class='jobs' >";

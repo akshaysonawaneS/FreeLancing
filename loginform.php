@@ -1,8 +1,8 @@
-<div class="modal fade" id="exampleModalCenter1" tabindex="0" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal" id="exampleModalCenter1" tabindex="0" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       
-      <div class="modal-body">
+      <div class="modal-body" autofocus>
 		<img src="img_avatar1.png" class="avatar">
 		
 		<div class="logincontent">
