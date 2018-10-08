@@ -48,10 +48,10 @@ session_start();
   <?php
     if(empty($_SESSION['uname']))
 	{
-		 echo '<button type="button" id="loginindex" class="btn btn-light" data-toggle="modal" data-target="#exampleModalCenter1"> Log in </button>';
-		 $_SESSION["uname"]='guest';
-		$_SESSION["uid"]='default';
-		$_SESSION['error']='none';
+		 echo ' <button type="button" id="loginindex" class="btn btn-light" data-toggle="modal" data-target="#exampleModalCenter1">
+    Log in
+  </button>';
+		 
 		 $down=1;
 	}
 	else
@@ -69,15 +69,7 @@ session_start();
 
 
   </div>
-  <script>
-	var down = '<?php echo $down; ?>';
-	if (down == 1){
-		$(document).ready(function() 
-			{ 
-				$('#loginindex').click(); 
-			});
-	}
-  </script>
+ 
   
 </nav>
   <div>
@@ -106,18 +98,13 @@ session_start();
  <div>
 <?php
 	include 'dbconn.php';
-<<<<<<< HEAD
-	
   if(!empty($_SESSION['uname']))
   {
     $uname=$_SESSION["uname"];
     $id=$_SESSION["uid"];  
   }
 	$count=1;
-=======
-	$uname=$_SESSION["uname"];
-	$id=$_SESSION["uid"];
->>>>>>> 24d77ded2f8264e772598d5ac7db467586535718
+
 	$sql = "SELECT * FROM tasks";
 	$result = mysqli_query($conn, $sql);
 	while($row = mysqli_fetch_assoc($result)) {
