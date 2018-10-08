@@ -12,9 +12,10 @@ session_start();
   
   <link rel="stylesheet" type="text/css" href="frontpage.css">
   
-  <link rel="stylesheet" type="text/css" href="custom.css">
+  <link rel="stylesheet" type="text/css" href="custom1.css">
 
   <script type="text/javascript" href="custom.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
@@ -76,40 +77,28 @@ session_start();
     	}
     ?>
 
-    <div style="padding-bottom: 10px;">
-      <div class="jobs">
-        <h3>Title</h3>
-        <p>Description</p>
-      </p>
-      </div>
-    </div>
-    <div style="padding-top: 10px; padding-bottom: 10px;">
-      <div class="jobs">
-        <h3>Title</h3>
-        <p>Description</p>
-      </p>
-      </div>
-    </div>
-    <div style="padding-top: 10px; padding-bottom: 10px;">
-      <div class="jobs">
-        <h3>Title</h3>
-        <p>Description</p>
-      </p>
-      </div>
-    </div>
-    <div style="padding-top: 10px; padding-bottom: 10px;">
-      <div class="jobs">
-        <h3>Title</h3>
-        <p>Description</p>
-      </p>
-      </div>
-    </div>
-    <div style="padding-top: 10px; padding-bottom: 10px;">
-      <div class="jobs">
-        <h3>Title</h3>
-        <p>Description</p>
-      </p>
-      </div>
-    </div>
+
+</div>
+ <div>
+<?php
+	include 'dbconn.php';
+	
+  if(!empty($_SESSION['uname']))
+  {
+    $uname=$_SESSION["uname"];
+    $id=$_SESSION["uid"];  
+  }
+	$count=1;
+	$sql = "SELECT * FROM tasks";
+	$result = mysqli_query($conn, $sql);
+	while($row = mysqli_fetch_assoc($result)) {
+		echo "<div class='jobs' >";
+		echo "<h3> TITLE - ".$row["title"]."</h3>";
+		echo "<p> DESCRIPTION - ".$row["description"]."</p>";
+		echo "</div>";
+	}
+	
+?>
+</div>
 </body>
 </html>

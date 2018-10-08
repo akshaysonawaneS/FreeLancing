@@ -1,0 +1,58 @@
+.posting{
+	margin: 30px;
+
+}
+
+.sideBar{
+	margin-top:20px;
+	width: 250px;
+	height: 700px; 	
+	padding: 7px;
+	border-right: 1px solid black;
+	text-align: center;
+	position: fixed;
+	top:50px;
+
+}
+
+.jobs {
+	background-color: white;
+	position:relative;
+	top:45px;
+	left:260px;
+	width:1075px;
+	height: 200px;
+	opacity: 0.8;
+	margin-top:50px;
+	border-radius: 8px;
+
+	
+}
+.jobs:hover{
+	opacity: 1.0;
+}
+.sidenav {
+    height: 550px;
+    width: 220px;
+    position: fixed;
+    z-index: 1;
+    top: 70px;
+    left: 15px;
+    background-color: #eef;
+    overflow-x: hidden;
+    padding-top: 20px;
+    border-radius: 5px;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: blue;
+}
+

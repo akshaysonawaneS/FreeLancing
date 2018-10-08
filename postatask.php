@@ -11,7 +11,7 @@ session_start();
   
   <link rel="stylesheet" type="text/css" href="frontpage.css">
   
-  <link rel="stylesheet" type="text/css" href="custom.css">
+  <link rel="stylesheet" type="text/css" href="custom1.css">
 
   <script type="text/javascript" href="custom.js"></script>
   
