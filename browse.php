@@ -48,10 +48,10 @@ session_start();
   <?php
     if(empty($_SESSION['uname']))
 	{
-		 echo '<button type="button" id="loginindex" class="btn btn-light" data-toggle="modal" data-target="#exampleModalCenter1"> Log in </button>';
-		 $_SESSION["uname"]='guest';
-		$_SESSION["uid"]='default';
-		$_SESSION['error']='none';
+		 echo ' <button type="button" id="loginindex" class="btn btn-light" data-toggle="modal" data-target="#exampleModalCenter1">
+    Log in
+  </button>';
+		 
 		 $down=1;
 	}
 	else
@@ -69,6 +69,7 @@ session_start();
 	
 
   </div>
+<<<<<<< HEAD
   <script>
 	var down = '<?php echo $down; ?>';
 	if (down == 1){
@@ -81,6 +82,9 @@ session_start();
     $('.modal-body').focus();
 })
   </script>
+=======
+ 
+>>>>>>> a07e7c366d7eb948c87b4c7a2d6b16c1f42ed1bb
   
 </nav>
   <div>
@@ -107,10 +111,10 @@ session_start();
 
 
 </div>
-  </div>
-</div>
+ <div>
 <?php
 	include 'dbconn.php';
+<<<<<<< HEAD
 	$uname=$_SESSION["uname"];
 	$id=$_SESSION["uid"];
 	$var=$_GET["card"];
@@ -143,6 +147,16 @@ session_start();
 		$sql = "SELECT * FROM tasks WHERE Category='cloud computing'";
 	}
 	
+=======
+  if(!empty($_SESSION['uname']))
+  {
+    $uname=$_SESSION["uname"];
+    $id=$_SESSION["uid"];  
+  }
+	$count=1;
+
+	$sql = "SELECT * FROM tasks";
+>>>>>>> a07e7c366d7eb948c87b4c7a2d6b16c1f42ed1bb
 	$result = mysqli_query($conn, $sql);
 	while($row = mysqli_fetch_assoc($result)) {
 		echo "<div class='jobs' >";
@@ -152,6 +166,6 @@ session_start();
 	}
 	
 ?>
-
+</div>
 </body>
 </html>
