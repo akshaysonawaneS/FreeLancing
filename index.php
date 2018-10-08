@@ -46,15 +46,22 @@ include 'dbconn.php';
         <a class="nav-link" href="howitworks.html">How it works</a>
       </li>
     </ul>
-    <button type="button" id="loginindex" class="btn btn-light" data-toggle="modal" data-target="#exampleModalCenter1">
-		Log in
-	</button>
-	
-	<button type="button" class="btn btn-light" data-toggle="modal" data-target="#exampleModalCenter2">
-		<span class="glyphicon glyphicon-user"></span>
-		Sign up
-	</button>
-
+	<?php
+	if(empty($_SESSION['uname']))
+	{
+		 echo " <button type='button' id='loginindex' class='btn btn-light' data-toggle='modal' data-target='#exampleModalCenter1'>Log in</button>";
+		 echo "<button type='button' class='btn btn-light' data-toggle='modal' data-target='#exampleModalCenter2'><span class='glyphicon glyphicon-user'></span> Sign up </button>";
+		
+	}
+	else
+    {
+		
+		
+      echo "<p class='username'>Welcome, ".$_SESSION['uname']."</p>";
+      echo '<form action="logout.inc.php" method="post"><button type="submit" name="logout" class="btn btn-light" style="margin-left:8px;">Log out</button></form>';
+    }
+	?>
+   
   </div>
 
 <?php
