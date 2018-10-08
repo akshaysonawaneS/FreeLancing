@@ -44,14 +44,22 @@ session_start();
       </li>
     </ul>
 	<?php
-    if(!empty($_SESSION['uname']))
-    {
+	include 'loginform.php';
+    if(empty($_SESSION['uname']))
+	{
+		echo " <button type='button' id='loginindex' class='btn btn-light' data-toggle='modal' data-target='#exampleModalCenter1'>Log in</button>";
+		 echo "<script>$(document).ready(function() { $('#loginindex').click(); }); $('#exampleModalCenter1').appendTo('body').modal('show');</script>";
+		
+	}else{
+		
       echo "<p class='username'>Welcome, ".$_SESSION['uname']."</p>";
       echo '<form action="logout.inc.php" method="post"><button type="submit" name="logout" class="btn btn-light" style="margin-left:8px;">Log out</button></form>';
     }
   ?>
 
   </div>
+  
+  
   
 </nav>
 
@@ -82,7 +90,13 @@ session_start();
 
   <h4 style="position: fixed; top: 290px; left: 750px;">EMAIL</h4>
   <input type="text" name="" style="width: 300px; position: fixed; top: 320px; left: 750px;">
-  <button class="btn btn-info" style="width: 100px; position: fixed; top: 500px; left: 1000px;" name="post">POST</button>
+  <?php
+    if(!empty($_SESSION['uname']))
+	{	echo"<button class='btn btn-info' style='width: 100px; position: fixed; top: 500px; left: 1000px;' name='post'>POST</button>";
+	}else{
+		echo "<p style='position: fixed; top: 500px; left: 1000px;color:red;font-size:150%'>login first to post !</p>";
+	}
+	?>
 
 </body>
 </html>

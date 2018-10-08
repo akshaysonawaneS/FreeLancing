@@ -38,7 +38,7 @@ session_start();
         <a class="nav-link" href="postatask.php">Post a Task</a>
       </li>
        <li class="nav-item active">
-        <a class="nav-link" href="browse.php">Browse Tasks</a>
+        <a class="nav-link" href="browse.php?card=0">Browse Tasks</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="howitworks.html">How it works</a>
@@ -46,13 +46,12 @@ session_start();
     </ul>
 	
   <?php
+	include 'loginform.php';
     if(empty($_SESSION['uname']))
 	{
-		 echo ' <button type="button" id="loginindex" class="btn btn-light" data-toggle="modal" data-target="#exampleModalCenter1">
-    Log in
-  </button>';
-		 
-		 $down=1;
+		 echo " <button type='button' id='loginindex' class='btn btn-light' data-toggle='modal' data-target='#exampleModalCenter1'>Log in</button>";
+		  echo "<script>$(document).ready(function() { $('#loginindex').click(); }); $('#exampleModalCenter1').appendTo('body').modal('show');</script>";
+		
 	}
 	else
     {
@@ -63,28 +62,13 @@ session_start();
       echo '<form action="logout.inc.php" method="post"><button type="submit" name="logout" class="btn btn-light" style="margin-left:8px;">Log out</button></form>';
     }
   ?>
-  <?php
-	include 'loginform.php';
-	?>
+ 
 	
 
   </div>
-<<<<<<< HEAD
-  <script>
-	var down = '<?php echo $down; ?>';
-	if (down == 1){
-		$(document).ready(function() 
-			{ 
-				$('#loginindex').click(); 
-			});
-	}
-	$('.modal-dialog').on('shown.bs.modal', function () {
-    $('.modal-body').focus();
-})
-  </script>
-=======
+
  
->>>>>>> a07e7c366d7eb948c87b4c7a2d6b16c1f42ed1bb
+
   
 </nav>
   <div>
@@ -114,55 +98,47 @@ session_start();
  <div>
 <?php
 	include 'dbconn.php';
-<<<<<<< HEAD
-	$uname=$_SESSION["uname"];
-	$id=$_SESSION["uid"];
-	$var=$_GET["card"];
-	if($var==0)
+	if(!empty($_SESSION["uname"]))
 	{
-		$sql = "SELECT * FROM tasks";
-	}
-	else if($var==1)
-	{
-		$sql = "SELECT * FROM tasks WHERE Category='web development'";
-	}
-	else if($var==2)
-	{
-		$sql = "SELECT * FROM tasks WHERE Category='android app development'";
-	}
-	else if($var==3)
-	{
-		$sql = "SELECT * FROM tasks WHERE Category='software development'";
-	}
-	else if($var==4)
-	{
-		$sql = "SELECT * FROM tasks WHERE Category='database development'";
-	}
-	else if($var==5)
-	{
-		$sql = "SELECT * FROM tasks WHERE Category='software testing'";
-	}
-	else if($var==6)
-	{
-		$sql = "SELECT * FROM tasks WHERE Category='cloud computing'";
-	}
-	
-=======
-  if(!empty($_SESSION['uname']))
-  {
-    $uname=$_SESSION["uname"];
-    $id=$_SESSION["uid"];  
-  }
-	$count=1;
-
-	$sql = "SELECT * FROM tasks";
->>>>>>> a07e7c366d7eb948c87b4c7a2d6b16c1f42ed1bb
-	$result = mysqli_query($conn, $sql);
-	while($row = mysqli_fetch_assoc($result)) {
-		echo "<div class='jobs' >";
-		echo "<h3> TITLE - ".$row["title"]."</h3>";
-		echo "<p> DESCRIPTION - ".$row["description"]."</p>";
-		echo "</div>";
+		$uname=$_SESSION["uname"];
+		$id=$_SESSION["uid"];
+		$var=$_GET["card"];
+		if($var==0)
+		{
+			$sql = "SELECT * FROM tasks";
+		}
+		else if($var==1)
+		{
+			$sql = "SELECT * FROM tasks WHERE Category='web development'";
+		}
+		else if($var==2)
+		{
+			$sql = "SELECT * FROM tasks WHERE Category='android app development'";
+		}
+		else if($var==3)
+		{
+			$sql = "SELECT * FROM tasks WHERE Category='software development'";
+		}
+		else if($var==4)
+		{
+			$sql = "SELECT * FROM tasks WHERE Category='database development'";
+		}
+		else if($var==5)
+		{
+			$sql = "SELECT * FROM tasks WHERE Category='software testing'";
+		}
+		else if($var==6)
+		{
+			$sql = "SELECT * FROM tasks WHERE Category='cloud computing'";
+		}
+		
+		$result = mysqli_query($conn, $sql);
+		while($row = mysqli_fetch_assoc($result)) {
+			echo "<div class='jobs' >";
+			echo "<h3> TITLE - ".$row["title"]."</h3>";
+			echo "<p> DESCRIPTION - ".$row["description"]."</p>";
+			echo "</div>";
+		}
 	}
 	
 ?>
